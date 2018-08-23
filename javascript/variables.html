@@ -31,6 +31,8 @@
     </head>
 <body>
     <a href="#" id="boton" class="boton">Agregar tarjeta</a>
+    <input type="text" placeholder="nota a qui" id="texto" >
+    <input type="color"name="" id="color">
     <div class="contenedor"id="contenedor">
             
     </div>
@@ -39,11 +41,14 @@
             
             var boton=document.getElementById('boton');
             var contenedor=document.getElementById('contenedor');
-            
+            var texto=document.getElementById('texto');
+
             boton.addEventListener("click",function(){
                 console.log('click en boton');
                 var miTarjeta=document.createElement('div')
                 miTarjeta.classList.add('tarjeta');
+                miTarjeta.innerHTML=texto.value;
+                miTarjeta.style.backgroundColor=color.value;
                 contenedor.appendChild(miTarjeta);
             });
           </script>       
