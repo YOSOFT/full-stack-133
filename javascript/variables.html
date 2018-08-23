@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .tarjeta{
+        width: 200px;
+        height: 200px;
+        background-color: yellowgreen;
+        box-shadow: 2px 2px 5px  #2424249c;
+        margin: 5px;
+    }
+    .contenedor{
+        display: flex;
+        flex-wrap: wrap;
+
+        
+    }
+    .boton{
+        padding: 5px;
+        background-color: aqua;
+        color: white;
+        border-radius: none ;
+        user-select: none        ;
+        text-decoration: none;
+            }
+    </style>
+    </head>
+<body>
+    <a href="#" id="boton" class="boton">Agregar tarjeta</a>
+    <div class="contenedor"id="contenedor">
+            
+    </div>
+    
+        <script>
+            
+            var boton=document.getElementById('boton');
+            var contenedor=document.getElementById('contenedor');
+            
+            boton.addEventListener("click",function(){
+                console.log('click en boton');
+                var miTarjeta=document.createElement('div')
+                miTarjeta.classList.add('tarjeta');
+                contenedor.appendChild(miTarjeta);
+            });
+          </script>       
+</body>
+</html>
